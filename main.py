@@ -155,8 +155,12 @@ class SearchDialog(QDialog):
         result = cursor.execute("SELECT * FROM students WHERE name LIKE ?", (f'%{name}%',))
         rows = list(result)  # Convert the result to a list
         print(rows)  # Print the rows
+        if not rows:
+            QMessageBox.information(self, "No results", "No students found with that name.")
+            return
+        print(rows)  # Print the rows
         # Find items in the table with the given name
-        items = student_window.table.findItems(name, Qt.MatchFlag.MatchFixedString)
+        items = student_window.table.findItems(name, Qt.MatchFlag.MatchContains)
 
         for item in items:
             print(item)  # Print the item
