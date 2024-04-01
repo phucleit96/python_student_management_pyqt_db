@@ -1,4 +1,5 @@
 # Student Management System
+![Demo](https://i.imgur.com/xPCqw03.gif)
 This is a simple Student Management System built using Python and PyQt6 for the GUI. The application allows you to manage student records stored in a SQLite database.  
 ## Libraries Used
 1. sys: This is a built-in Python module that provides access to some variables used or maintained by the Python interpreter.  
